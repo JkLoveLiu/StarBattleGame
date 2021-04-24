@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarBattleGame</title>
+    <link rel="shortcut icon" href="./img/logo-02.png">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/body.css">
+</head>
+<body>
+    <audio src="./media/background.mp3" id="bgAudio" class="audio" loop></audio>
+    <audio src="./media/destroyed.mp3" id="destroyedAudio" class="audio"></audio>
+    <audio src="./media/shoot.mp3" id="shootAudio" class="audio"></audio>
+    <!-- 遮罩层 -->
+    <div class="zhezhao">
+        <div class="introduction">
+            <p>How to Play Star Battle.</p>
+			<br>
+            <p>1. Move the spaceship using the sensible areas in the screen;</p>
+            <p>2. The timer present the time lapsed;</p>
+            <p>3. The fuel counter show the remain fuel;</p>
+            <p>4. During the flight, the spaceship needs to destroy the asteroids and enemy spaceships that are presented in the space;</p>
+            <p>5. You can shoot pressing Space Bar;</p>
+            <p>6. If the spaceship hits a asteroid or another spaceship, you lose 15 points of fuel;</p>
+            <p>7. Enemy spaceship needs 1 shot to be destroyed, you will get 5 points for each enemy destroyed;</p>
+            <p>8. Asteroid needs 2 shots to be destroyed, you will get 10 points for each asteroid destroyed;</p>
+            <p>9. If you destroy a friendly spaceship, you lose 10 points;</p>
+            <p>10. During the flight, the spaceship needs to collect fuel in the space;</p>
+            <p>11. You can pause the game clicking in a button pause, or pressing the letter "p";</p>
+            <p>12. Go beyond all limits;</p>
+            <p>Battle in Space with Star Battle Championship...</p>
+            <div class="btn_startGame">Start Game</div>
+        </div>
+    </div>
+    <div class="body">
+        <!-- 头部区域 -->
+        <img src="./img/logo-01.png" class="imgLogo">
+        <img src="./img/addtime.png" class="imgAddTime">
+        <div class="jdt_w">
+            <div class="jdt_n">
+                15
+            </div>
+        </div>
+        <div class="count_score">
+            <img src="./img/score.png" class="imgScore">
+            <p>0</p>
+        </div>
+        <div class="count_time">
+            <img src="./img/time3.png" class="imgCountTime">
+            <p>0</p>
+        </div>
+        <!-- 游戏区域 -->
+        <div class="game">
+            <div class="hero_ship"></div>
+            <!-- 游戏结束界面 -->
+            <div class="GameOver">
+                <div class="getInformation">
+                    <input type="text" class="informationText" placeholder="YourName">
+                    <button class="submitInformation">continue</button>
+                </div>
+            </div>
+            <!-- 计分界面 -->
+            <div class="finallyScore">
+                <div class="finallyRank">
+                    <img src="./img/logo-02.png" class="finallyRankLogo">
+                    <ul class="rankDivTitle">
+                        <li>ID</li>
+                        <li>name</li>
+                        <li>score</li>
+                        <li>timer</li>
+                    </ul>
+                    <div class="rankDiv"></div>
+                    <div class="return_startGame">Start Game</div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部区域 -->
+        <img src="./img/speaker.png" class="control_sound">
+		<img src="./img/pause.png" class="game_pause">
+        <img src="./img/a-.png" class="lessSound">
+        <img src="./img/a+.png" class="addSound">
+    </div>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/keyMove.js"></script>
+</body>
+
+</html>
