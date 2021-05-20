@@ -1,0 +1,211 @@
+ * {
+     margin: 0;
+     padding: 0;
+ }
+ 
+ body {
+     background-image: url(../img/background-1.jpg);
+     width: 100%;
+     height: 100%;
+	 user-select: none;
+ }
+ button{
+	 border: none;
+	 outline: none;
+ }
+ input{
+	 outline: none;
+ }
+ @keyframes bodyJoin {
+     from {
+         transform: translateY(-500px);
+     }
+     to {
+         transform: translateY(0px);
+     }
+ }
+ 
+ .body {
+     width: 790px;
+     height: 500px;
+     margin: 0 auto;
+     margin-top: 85px;
+     border: solid;
+     position: relative;
+     box-shadow: 0px 0px 27px 7px rgb(100, 100, 300);
+     animation: bodyJoin 1s linear forwards;
+ }
+ /* 游戏区 */
+ 
+ .game {
+     width: 750px;
+     height: 380px;
+     border: solid;
+     margin: 0 auto;
+     margin-top: 50px;
+     position: relative;
+     overflow: hidden;
+ }
+ /* 敌人飞船 */
+ 
+ .enemy_ship {
+     width: 60px;
+     height: 60px;
+     overflow: hidden;
+     background-repeat: no-repeat;
+     background-position: 0px 0px;
+     /* border: orangered 2px solid; */
+     background-size: 388%;
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     z-index: 4;
+ }
+ 
+ .enemy_ship_one {
+     background-image: url(../img/ship_1.png);
+ }
+ 
+ .enemy_ship_two {
+     background-image: url(../img/ship_2.png);
+ }
+ 
+ .enemy_ship_three {
+     background-image: url(../img/ship_3.png);
+ }
+ 
+ @keyframes planet_revolve {
+     from {
+         transform: rotate(0deg);
+     }
+     to {
+         transform: rotate(360deg);
+     }
+ }
+ /* 可攻击行星 */
+ 
+ .planet_all {
+     position: absolute;
+     left: 750px;
+     animation: planet_revolve 2s linear infinite;
+     z-index: 3;
+ }
+ 
+ .planet_brown {
+     height: 100px;
+     width: 100px;
+ }
+ 
+ .planet_dark {
+     height: 80px;
+     width: 80px;
+ }
+ 
+ .planet_gray {
+     height: 60px;
+     width: 60px;
+ }
+ 
+ .planet_gray_2 {
+     height: 80px;
+     width: 80px;
+ }
+ /* 燃料 */
+ 
+ .energy {
+     width: 35px;
+     height: 35px;
+     animation: planet_revolve 2s linear infinite;
+     z-index: 4;
+ }
+ /* 不可攻击行星 */
+ 
+ .planet_nobumpAll {
+     position: absolute;
+     z-index: 2;
+     opacity: 0.8;
+ }
+ 
+ .planet_nobump_1 {
+     width: 140px;
+     left: 752px;
+ }
+ 
+ .planet_nobump_2 {
+     width: 120px;
+     left: 752px;
+ }
+ 
+ .planet_nobump_3 {
+     left: 752px;
+ }
+ 
+ .planet_nobump_4 {
+     left: 752px;
+ }
+ 
+ .planet_nobump_5 {
+     left: 752px;
+ }
+ 
+ .planet_nobump_6 {
+     width: 100px;
+     left: 752px;
+ }
+ 
+ .planet_nobump_7 {
+     left: 752px;
+ }
+ 
+ .planet_nobump_8 {
+     width: 100px;
+     left: 752px;
+ }
+ 
+ .planet_nobump_9 {
+     width: 200px;
+     left: 752px;
+ }
+ 
+ .planet_nobump_10 {
+     width: 200px;
+     left: 752px;
+ }
+ 
+ .planet_nobump_11 {
+     left: 752px;
+ }
+ 
+ .planet_nobump_12 {
+     width: 180px;
+     left: 752px;
+ }
+ /* 被控制的飞船 */
+ 
+ .hero_ship {
+     width: 70px;
+     height: 70px;
+     overflow: hidden;
+     background-image: url(../img/ship_4.png);
+     background-repeat: no-repeat;
+     background-position: 0px 0px;
+     /* border: orangered 2px solid; */
+     background-size: 300%;
+     position: absolute;
+     left: -70px;
+     top: 130px;
+     display: none;
+     z-index: 5;
+ }
+ /* 子弹 */
+ 
+ .bullet {
+     height: 15px;
+     width: 35px;
+     background-image: url(../img/playerBullet.png);
+     background-size: cover;
+     position: absolute;
+     left: 100px;
+     top: 100px;
+     z-index: 5;
+ }

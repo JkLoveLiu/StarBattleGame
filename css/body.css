@@ -1,0 +1,287 @@
+/* 遮罩层 */
+
+.zhezhao {
+    height: 100vh;
+    width: 100%;
+    /* background-color: green; */
+    position: relative;
+    float: left;
+    z-index: 9;
+    margin-top: -85px;
+    animation: bodyJoin 1s linear forwards;
+}
+
+.introduction {
+    height: 380px;
+    width: 750px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 141px auto;
+}
+.introduction p{
+	padding-left: 20px;
+	font-size: 15px;
+}
+.btn_startGame {
+    height: 34px;
+    width: 150px;
+    background-color: rgb(0, 183, 255);
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    line-height: 34px;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+.btn_startGame:hover {
+    background-color: orange;
+    cursor: pointer;
+}
+
+
+/* 头部标签 */
+
+.imgLogo {
+    width: 50px;
+    position: absolute;
+    left: 15px;
+    top: 7px;
+}
+
+.imgAddTime {
+    width: 35px;
+    position: absolute;
+    right: 400px;
+    top: 7px;
+}
+
+.jdt_w {
+    width: 150px;
+    height: 25px;
+    position: absolute;
+    right: 240px;
+    top: 12px;
+    border: solid white 1px;
+    opacity: 0.9;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+}
+
+.jdt_n {
+    width: 75px;
+    height: 25px;
+    background-color: rgb(0, 105, 241);
+    position: absolute;
+    left: -1px;
+    border-radius: 20px;
+}
+
+.count_score {
+    height: 40px;
+    width: 100px;
+    position: absolute;
+    right: 128px;
+    top: 5px;
+    /* border: red solid 2px; */
+    text-align: right;
+    line-height: 40px;
+    color: white;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.imgScore {
+    height: 35px;
+    float: left;
+}
+
+.count_time {
+    height: 40px;
+    width: 100px;
+    position: absolute;
+    right: 21px;
+    top: 5px;
+    /* border: red solid 2px; */
+    text-align: right;
+    line-height: 40px;
+    color: white;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.imgCountTime {
+    height: 35px;
+    float: left;
+    margin-top: 2px;
+}
+
+
+/* 底部标签 */
+
+.control_sound {
+    height: 55px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 5px;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+}
+
+.game_pause {
+    height: 55px;
+    float: right;
+    margin-right: 20px;
+    /* margin-top: 5px; */
+    position: absolute;
+    bottom: 3px;
+    right: 160px;
+}
+
+.addSound {
+    height: 55px;
+    float: right;
+    margin-right: 20px;
+    /* margin-top: 5px; */
+    position: absolute;
+    bottom: 3px;
+    right: 85px;
+}
+
+.lessSound {
+    height: 55px;
+    float: right;
+    margin-right: 20px;
+    /* margin-top: 5px; */
+    position: absolute;
+    bottom: 3px;
+    right: 15px;
+}
+
+@keyframes GameOverAppear {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes GameOverDisplay {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0);
+    }
+}
+
+.GameOver {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 7;
+    float: left;
+    animation: GameOverAppear 0.5s linear forwards;
+    /* animation: GameOverDisplay 0.5s linear forwards; */
+}
+
+.getInformation {
+    height: 320px;
+    width: 50%;
+    margin: 30px auto;
+    background-color: white;
+    border: solid 3px #353535;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.informationText {
+    height: 50px;
+    width: 80%;
+    border-radius: 15px;
+    border: 3px solid black;
+    margin-top: 90px;
+    margin-top: 0 auto;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.submitInformation {
+    height: 60px;
+    width: 200px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 60px;
+    border-radius: 20px;
+    background-color: rgb(0, 178, 248);
+    color: white;
+}
+
+.finallyScore {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    animation: GameOverAppear 0.5s linear forwards;
+}
+
+.finallyRank {
+    height: 100%;
+    width: 100%;
+}
+
+.finallyRankLogo {
+    width: 70px;
+    margin-left: 330px;
+}
+
+.rankDiv {
+    height: 250px;
+    width: 700px;
+    margin: 0 auto;
+    /* border: orangered solid 2px; */
+    overflow: auto;
+}
+
+.rankDivTitle {
+    margin-left: 25px;
+    margin-top: -20px;
+}
+
+li {
+    list-style: none;
+    float: left;
+    width: 100px;
+    height: 40px;
+    margin-left: 40px;
+    margin-top: 0px;
+    padding-left: 15px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.return_startGame {
+    height: 34px;
+    width: 150px;
+    background-color: rgb(0, 183, 255);
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    line-height: 34px;
+    margin: 0 auto;
+    margin-top: 12px;
+}
+
+.return_startGame:hover {
+    background-color: orange;
+    cursor: pointer;
+}
